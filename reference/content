@@ -1,0 +1,110 @@
+Applicants Details 
+Employment Details
+Referees Details
+Employment Details
+ Loan Request Details 
+ Loan Request Details 
+. For Official Use  ---####
+Customer declaration
+
+Your Postal Address 
+Postal Code 
+Telephone (Home) 
+Mobile No. Email 
+
+Present address: 
+District: 
+  Sector: 
+ Cell: 
+Village/Umudugudu: 
+
+Number of years at present physical address: 
+Number of dependants: 
+Education level:
+
+
+Marital Status
+
+Employment Status: Employed Self Employed 
+If Employed: 
+Name of Employer 
+Date of Employment Personal/Staff No 
+Station Designation Department 
+Terms of Employment: Permanent Contract If on contract, state expiry date 
+Gross Salary (RWF) Net Salary (RWF) 
+Physical Address (Building) Street Block No. 
+Postal Address Postal Code 
+Town Country Office Tel 
+Fax No Website Email 
+
+
+1. Relative‟s Surname     Other Names             ID/Passport Number 
+Relation to applicant     Postal Address          Office Tel 
+Mobile No.                Email                   Occupation 
+2. Non- Relative‟s Surname Other Names            ID/Passport Number 
+Relation to applicant     Postal Address          Office Tel 
+Mobile No.                Email                   Occupation 
+
+
+Account Type            Bank        Branch      Account No      Date Opened
+
+
+Loan No.    Branch    Amount    Repayment   Amount              Date Granted   Top Up 
+
+Card Name Card No. Limit Expiry Date
+
+Bank Amount Date Granted Repayment Amount Refinancing
+
+
+
+
+Description           | Estimated Open Market Value | Location 
+Size                  | In the Name of              | If property is developed, indicate whether: RESIDENTIAL/COMMERCIAL/AGRICULTURAL 
+Personal insurance cover: 
+Loan duration:        | Premium rate applicable1    | Total premium:
+
+
+
+
+FIRST LOAN |  TOP UP |  REFINANCE     |   2ND LOAN (Tick as appropriate) 
+Facility type: ………………………………………………………………………………..
+Loan amount (Rwf) ………………………………… Cost of items to be financed ((Rwf) ………………………………………
+Purpose of loan ………………………………………………………………………………………………………………………………………..
+Repayment Period ………………................... (months) Monthly Payments (Rwf) ………………………… p.m. 
+Account to be credited……………………    …………………………………………………………………………………………………………
+
+
+applicantFirstNameCtrl            : ['', Validators.required],
+applicantMiddleNameCtrl           : [''],
+applicantLastNameCtrl             : ['', Validators.required],
+applicantIdentificationCtrl       : ['', Validators.required],
+applicantNationalityCtrl          : ['', Validators.required],
+applicantTaxPinCtrl               : ['', Validators.required],
+applicantDateOfBirthCtrl          : ['', Validators.required],
+applicantGenderCtrl               : ['', Validators.required],
+applicantMaritalStatusCtrl        : ['', Validators.required],
+applicantPostalAddressCtrl        : ['', Validators.required],
+applicantPostalCodeCtrl           : ['', Validators.required],
+applicantStateCtrl                : ['', Validators.required],
+applicantDistrictCtrl             : ['', Validators.required],
+applicantCountryCtrl              : ['', Validators.required],
+applicantPresentAddressCtrl       : ['', Validators.required],
+applicantPresentPostalCodeCtrl    : ['', Validators.required],
+applicantPresentStateCtrl         : ['', Validators.required],
+applicantPresentDistrictCtrl      : ['', Validators.required],
+applicantPresentCountryCtrl       : ['', Validators.required],
+applicantPhoneNumberCtrl          : ['', Validators.required],
+applicantEmailCtrl                : ['', Validators.required],
+applicantEducationalLevelCtrl     : [''],
+applicantNumberOfDependantsCtrl   : [''],
+
+
+securityDescriptionCtrl             : ['', Validators.required],
+securityEstimatiedMarketvalueCtrl   : ['', Validators.required],
+securityLocationCtrl                : ['', Validators.required],
+securitySizeCtrl                    : ['', Validators.required],
+securityNameOfCtrl                  : ['', Validators.required],
+securityIsDevelopedPropertyCtrl     : ['', Validators.required],
+securityLoanDurationCtrl            : ['', Validators.required],
+securityPremiumRateCtrl             : ['', Validators.required],
+securityTotalPremiumCtrl            : ['', Validators.required],

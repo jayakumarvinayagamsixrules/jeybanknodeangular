@@ -1,0 +1,732 @@
+
+<mat-card class="registrationCard">
+  
+  <mat-stepper #stepper>
+    <mat-step [stepControl]="applicantsFormGroup" [editable]="isEditable">
+      <form [formGroup]="applicantsFormGroup">
+        <ng-template matStepLabel>Applicants Details</ng-template>
+        
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline" style="width: 50%">
+              <mat-label>Title</mat-label>
+              <mat-select>
+                <mat-option value="mr">Mr</mat-option>
+                <mat-option value="mrs">Mrs</mat-option>
+                <mat-option value="ms">Ms</mat-option>
+                <mat-option value="mis">Mis</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="applicantFirstNameCtrl" placeholder="First name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Middle Name</mat-label>
+              <input matInput formControlName="applicantMiddleNameCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput formControlName="applicantLastNameCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>ID / Passport No</mat-label>
+              <input matInput formControlName="applicantIdentificationCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Nationality</mat-label>
+              <input matInput formControlName="applicantNationalityCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Tax PIN No</mat-label>
+              <input matInput formControlName="applicantTaxPinCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Date of Birth</mat-label>
+              <input matInput formControlName="applicantDateOfBirthCtrl" placeholder="Last name">
+            </mat-form-field>
+            <!-- <mat-form-field appearance="outline">
+              <mat-label>Date of Birth</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field> -->
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div>
+              <label>Gender </label>
+              <mat-radio-group>
+                <mat-radio-button value="auto">Male</mat-radio-button>
+                <mat-radio-button value="always">Female</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div>
+              <label>Marital Status</label>
+              <mat-radio-group>
+                <mat-radio-button value="auto">Single</mat-radio-button>
+                <mat-radio-button value="always">Married</mat-radio-button>
+                <mat-radio-button value="always">Widowed</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+        <br/>
+        <h3>Address Detail</h3>
+        <mat-grid-list cols="5" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Address</mat-label>
+              <textarea matInput formControlName="applicantPostalAddressCtrl"></textarea>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Code</mat-label>
+              <input matInput formControlName="applicantLastNameCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>State</mat-label>
+              <input matInput formControlName="applicantStateCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>District</mat-label>
+              <input matInput formControlName="applicantDistrictCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Country</mat-label>
+              <mat-select>
+                <mat-option value="mr">Mr</mat-option>
+                <mat-option value="mrs">Mrs</mat-option>
+                <mat-option value="ms">Ms</mat-option>
+                <mat-option value="mis">Mis</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="5" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Present Address</mat-label>
+              <textarea matInput formControlName="applicantPresentAddressCtrl"></textarea>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Code</mat-label>
+              <input matInput formControlName="applicantPresentPostalCodeCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>State</mat-label>
+              <input matInput formControlName="applicantPresentStateCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>District</mat-label>
+              <input matInput formControlName="applicantPresentDistrictCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Country</mat-label>
+              <mat-select>
+                <mat-option value="mr">Mr</mat-option>
+                <mat-option value="mrs">Mrs</mat-option>
+                <mat-option value="ms">Ms</mat-option>
+                <mat-option value="mis">Mis</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <span matPrefix>+91 &nbsp;</span>
+                <input type="tel"  formControlName="applicantPhoneNumberCtrl" matInput placeholder="555-555-1234">
+              </mat-form-field>
+          </mat-grid-tile>
+          
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput  formControlName="applicantEmailCtrl" placeholder="Ex. pat@example.com">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Education level</mat-label>
+              <input matInput formControlName="applicantEducationalLevelCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Number of dependants</mat-label>
+              <input matInput formControlName="applicantNumberOfDependantsCtrl" placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="employmentFormGroup" [editable]="isEditable">
+      <form [formGroup]="employmentFormGroup">
+        <ng-template matStepLabel> Employment Details</ng-template>
+        <section class="example-section">
+          <label>Employment Status</label>
+          <mat-checkbox class="example-margin" >Employed</mat-checkbox>
+          <mat-checkbox class="example-margin" >Self Employed</mat-checkbox>
+        </section>
+        
+        <mat-grid-list cols="3" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Name of Employer </mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Date of Employment</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Personal/Staff No</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Station</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Designation</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Department</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Physical Address</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Street</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Code</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Address</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Street</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Code </mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Town</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Country</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Office Tel </mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Fax No</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Website</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          
+        </mat-grid-list>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="employmentFormGroup" [editable]="isEditable">
+      <form [formGroup]="employmentFormGroup">
+        <ng-template matStepLabel> Referees Details</ng-template>
+        <mat-grid-list cols="3" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="First name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>ID/Passport Number</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Relation to applicant</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Address</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Office Tel</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile No</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Occupation</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+        <mat-grid-list cols="3" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="First name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>ID/Passport Number</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Relation to applicant</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Address</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Office Tel</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile No</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Occupation</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="employmentFormGroup" [editable]="isEditable">
+      <form [formGroup]="employmentFormGroup">
+        <ng-template matStepLabel> Financial Details</ng-template>
+        <mat-grid-list cols="5" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Account Type</mat-label>
+              <input matInput placeholder="First name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Bank</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Branch</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Account No</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Date Opened</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+        <mat-grid-list cols="6" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Loan No</mat-label>
+              <input matInput placeholder="First name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Branch</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Amount</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Repayment   Amount</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Date Granted</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Top Up</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Card Name</mat-label>
+              <input matInput placeholder="First name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Card No</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Limit</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Expiry Date</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+        <mat-grid-list cols="5" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Bank</mat-label>
+              <input matInput placeholder="First name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Amount</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Date Granted</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Repayment Amount</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Refinancing</mat-label>
+              <input matInput placeholder="Last name">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="loanRequestFormGroup" [editable]="isEditable">
+      <form [formGroup]="loanRequestFormGroup">
+        <ng-template matStepLabel> Loan Request Details</ng-template>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" >FIRST LOAN</mat-checkbox>
+              <mat-checkbox class="example-margin" >TOP UP</mat-checkbox>
+              <mat-checkbox class="example-margin" >REFINANCE</mat-checkbox>
+              <mat-checkbox class="example-margin" >2ND LOAN</mat-checkbox>
+            </section>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Facility type</mat-label>
+              <input matInput formControlName="loanRequestFacilityTypeCtrl" placeholder="Facility type">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Loan amount </mat-label>
+              <input matInput formControlName="loanRequestLoanAmountCtrl" placeholder="Loan amount">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Cost of items to be financed </mat-label>
+              <input matInput formControlName="loanRequestCostOfItemsCtrl" placeholder="Cost of items to be financed">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Purpose of loan</mat-label>
+              <input matInput formControlName="loanRequestPurposeOfLoanCtrl" placeholder="Purpose of loan">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Repayment Period</mat-label>
+              <input matInput formControlName="loanRequestRepaymentPeriodCtrl" placeholder="Repayment Period">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label> Monthly Payments</mat-label>
+              <input matInput formControlName="loanRequestMonthlyPaymentCtrl" placeholder="Monthly Payments">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Account to be credited</mat-label>
+              <input matInput formControlName="loanRequestAccountCreditedCtrl" placeholder="Account to be credited">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="securityofferedFormGroup" [editable]="isEditable">
+      <form [formGroup]="securityofferedFormGroup">
+        <ng-template matStepLabel>Security Offered</ng-template>
+        <mat-grid-list cols="3" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Description</mat-label>
+              <textarea matInput formControlName="securityDescriptionCtrl" placeholder="Description"></textarea>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Estimated Open Market Value</mat-label>
+              <input matInput formControlName="securityEstimatiedMarketvalueCtrl" placeholder="Market Value">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Location</mat-label>
+              <input matInput formControlName="securityLocationCtrl" placeholder="Location">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Size</mat-label>
+              <input matInput formControlName="securitySizeCtrl" placeholder="Property size">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>In the Name of </mat-label>
+              <input matInput formControlName="securityNameOfCtrl" placeholder="In the Name of">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>If property is developed, indicate whether: RESIDENTIAL/COMMERCIAL/AGRICULTURAL</mat-label>
+              <input matInput formControlName="securityIsDevelopedPropertyCtrl" placeholder="If property is developed">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-divider></mat-divider>
+        <mat-grid-list cols="3" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Loan duration</mat-label>
+              <input matInput formControlName="securityLoanDurationCtrl" placeholder="Loan duration">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Premium rate applicable1</mat-label>
+              <input matInput formControlName="securityPremiumRateCtrl" placeholder="Premium rate">
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="outline">
+              <mat-label>Total premium</mat-label>
+              <input matInput formControlName="securityTotalPremiumCtrl" placeholder="Total premium">
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Customer declaration</ng-template>
+      <p>I certify that the information given by me in this loan application form is true and complete. I confirm that I have read the terms and 
+        conditions governing the granting of credit facilities (stated below) and agree to be bound by them. I authorize KCB BANK Rwanda LTD to 
+        make any enquiries, which may be considered necessary for confirmation of this information and for credit assessment. </p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Submit</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+  
+</mat-card>
+
